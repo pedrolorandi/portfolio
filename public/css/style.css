@@ -328,9 +328,6 @@ main .container .title button {
   border: 0px none;
   cursor: pointer;
 }
-main .container .title button:hover {
-  background: lightgrey;
-}
 main .container .description p:nth-child(2) {
   margin: 1rem 0 0 0;
 }
@@ -557,6 +554,9 @@ main .container.contact .info ul li img {
   opacity: 0.8;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
+}
+main .container.contact .info ul li img:hover {
+  opacity: 0.2;
 }
 main .container.contact .info ul li span {
   background: rgba(167, 201, 87, 0);
