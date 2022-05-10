@@ -488,13 +488,13 @@ main .container.projects .project:first-child {
   margin: 0;
 }
 main .container.projects .project.budgetapp {
-  background-image: url("/public/images/budgetapp.png");
+  background-image: url("../images/budgetapp.png");
 }
 main .container.projects .project.jsgame {
-  background-image: url("/public/images/jsgame.png");
+  background-image: url("../images/jsgame.png");
 }
 main .container.projects .project.portfolio {
-  background-image: url("/public/images/portfolio.png");
+  background-image: url("../images/portfolio.png");
 }
 main .container.projects .project:hover {
   background-size: 105%;
