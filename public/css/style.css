@@ -538,6 +538,9 @@ main .container.contact .info ul li img {
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
 }
+main .container.contact .info ul li img:active, main .container.contact .info ul li img:visited, main .container.contact .info ul li img:focused {
+  opacity: 0.8;
+}
 main .container.contact .info ul li img:hover {
   opacity: 0.2;
 }
