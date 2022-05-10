@@ -1,0 +1,119 @@
+@use '../scss' as *;
+
+main{
+  & .container{
+    & .title{
+      & button{
+        background: #222;
+        width: auto;
+        height: 45px;
+        font-family: inherit;
+        font-size: 1rem;
+        color: #FFF;
+        text-align: center;
+        padding: 0px 1em;
+        margin: 1rem 0 0 0;
+        transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out;       
+        border-radius: 0px;
+        border: 0px none;
+        cursor: pointer;
+
+        &:hover{
+          background: lightgrey;
+        }
+      }
+    }
+
+    & .description{    
+      & p{
+
+        &:nth-child(2){
+          margin: 1rem 0 0 0;
+        }
+      }
+    }
+
+    & .tools{     
+      & ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: start;
+        
+        & li{
+          list-style: none;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          flex-direction: column;
+          margin: 0 0 0 1em;
+
+          & img{
+            width: 50px;
+            opacity: .8;
+          }
+
+          & p {
+            margin: 0.7em 0 1em 0;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  main{
+    & .container{
+      & .title, .description, .tools{
+        flex-basis: 100%;
+        & ul{
+          justify-content: space-evenly;
+          & li{
+            margin: 0 1em 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  main{
+    & .container{
+      & .title, .description{
+        flex-basis: 0;
+      }
+      & .tools{
+        flex-basis: 100%;
+        margin-top: 0.25em;
+        & ul{
+          justify-content: space-between;
+          & li{
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px){
+  main{
+    & .container{
+      & .title, .description, .tools{
+        flex-basis: 0;
+        & ul{
+          justify-content: start; 
+          & li{
+            margin: 0 0 0 1em;
+          }
+        }
+      }
+    }
+  }
+}

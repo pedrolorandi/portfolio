@@ -1,0 +1,97 @@
+@use '../scss' as *;
+
+html{
+  font-family: $main-font-family;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.43;
+  font-size: 100%;
+  font-weight: 300;
+  font-style: normal;
+
+  animation: 1s slideIn;
+
+  // & .preload{
+  //   -webkit-transition: none !important;
+  //   -moz-transition: none !important;
+  //   -ms-transition: none !important;
+  //   -o-transition: none !important;
+  //   transition: none !important;
+  // }
+
+  a{
+    color: black;
+    text-decoration: none;
+    outline: none;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+
+
+    &:active, &:visited{
+      color: black;
+    }
+
+    &:hover{
+      color: lightgrey;
+    }
+  }
+
+  input, textarea{
+    font: inherit;
+    color: inherit;
+    
+    &:focus{
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.container{
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .container{
+    width: 750px;
+  }   
+}
+
+@media (min-width: 992px) {
+  .container{
+    width: 970px;
+  }  
+}
+
+@media (min-width: 1200px){
+  .container{
+    width: 1170px;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

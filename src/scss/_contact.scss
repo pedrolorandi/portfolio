@@ -1,0 +1,124 @@
+@use "../scss" as *;
+
+main {
+  & .container {
+    &.contact {
+      margin-top: 2em;
+
+      & p {
+        margin-top: 1rem;
+      }
+
+      & .info {
+        & ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: flex-start;
+          gap: 5em;
+
+          & li {
+            list-style: none;
+            margin: 2rem 0 0 0;
+
+            & img {
+              width: 50px;
+              opacity: 0.8;
+              transition: all 0.3s ease-out;
+              -webkit-transition: all 0.3s ease-out;
+
+              &:hover {
+                opacity: 0.2;
+              }
+            }
+
+            span {
+              background: rgba($color: #a7c957, $alpha: 0);
+              color: white;
+              position: absolute;
+              width: auto;
+              height: auto;
+              padding: 0.7em;
+              font-size: 1rem;
+              transition: all 0.3s ease-out;
+              -webkit-transition: all 0.3s ease-out;
+              border-radius: 0px;
+              border: 0px none;
+              margin: 0 0 0 1em;
+
+              &.show {
+                background: rgba($color: #a7c957, $alpha: 1);
+                color: #333;
+                margin: -1em 0 0 1em;
+              }
+
+              &.disappear {
+                background: rgba($color: #a7c957, $alpha: 0);
+                color: white;
+              }
+            }
+          }
+        }
+      }
+
+      & .form {
+        & form {
+          & input,
+          textarea {
+            background: none;
+            width: 100%;
+            height: 45px;
+            border: 1px solid #999;
+            padding: 0px 1em;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease-out;
+            -webkit-transition: all 0.3s ease-out;
+            border-radius: 0px;
+
+            &:focus {
+              border: 1px solid #000;
+              color: #000;
+            }
+
+            &[type="submit"] {
+              width: auto;
+              background: #222;
+              color: #fff;
+              text-align: center;
+              border: 0px none;
+              cursor: pointer;
+
+              &:hover {
+                background: lightgrey;
+              }
+            }
+          }
+
+          & textarea {
+            height: 120px;
+            padding-top: 1em;
+            line-height: 1.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  main {
+    & .container.contact {
+      & .info,
+      .form {
+        flex-basis: 100%;
+        & ul {
+          justify-content: space-evenly;
+          & li {
+            margin: 2.5em 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}

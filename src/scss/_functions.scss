@@ -1,0 +1,8 @@
+@use "sass:math";
+
+@function convert-size($size){
+  $ratio: 16;
+  $result: math.div($size, $ratio);
+
+  @return $result + rem;
+}

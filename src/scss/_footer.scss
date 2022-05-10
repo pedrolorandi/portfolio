@@ -1,0 +1,17 @@
+@use '../scss' as *;
+
+footer{
+  background: black;
+  margin: 1em 0 0 0;
+  padding: 1.2em 0;
+  text-align: center;
+
+  p{
+    margin: 0;
+    color: white;
+    
+    &:nth-child(2){
+      margin: 0.5em 0 0 0;
+    }
+  }
+}

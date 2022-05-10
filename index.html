@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedro Lorandi - Web Developer</title>
+    <link
+      rel="shortcut icon"
+      href="./public/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="javascript:scrollToElement('top');" id="top"
+            >Pedro Lorandi</a
+          >
+        </div>
+        <div class="nav-menu-icon">
+          <a class="hamb" href="#">
+            <i></i>
+          </a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="javascript:scrollToElement('about');">About Me</a></li>
+            <li>
+              <a href="javascript:scrollToElement('projects');">Projects</a>
+            </li>
+            <li>
+              <a href="javascript:scrollToElement('contact');">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="title">
+          <h1 class="title" id="about">ABOUT ME</h1>
+          <a href="#"><button>Download my Resume</button></a>
+        </div>
+        <div class="description">
+          <p>
+            Hello! I'm a former freelance Web Developer with 2 years of
+            experience that switched careers, went to Engineering school, went
+            corporate, moved to a new country, and now is coming back to web
+            development. There and Back Again, I guess! 😀
+          </p>
+          <p>
+            Do you want to know more about it? Feel free to send me a
+            <a href="javascript:scrollToElement('contact');">message!</a>
+          </p>
+        </div>
+        <div class="tools">
+          <ul>
+            <li>
+              <img src="./public/images/html5.svg" />
+              <p>HTML5</p>
+            </li>
+            <li>
+              <img src="./public/images/css3.svg" />
+              <p>CSS3</p>
+            </li>
+            <li>
+              <img src="./public/images/sass.svg" />
+              <p>Sass</p>
+            </li>
+            <li>
+              <img src="./public/images/bootstrap.svg" />
+              <p>Boostrap</p>
+            </li>
+            <li>
+              <img src="./public/images/javascript.svg" />
+              <p>JavaScript</p>
+            </li>
+            <li>
+              <img src="./public/images/react.svg" />
+              <p>React</p>
+            </li>
+            <li>
+              <img src="./public/images/jquery.svg" />
+              <p>jQuery</p>
+            </li>
+            <li>
+              <img src="./public/images/sql.svg" />
+              <p>SQL</p>
+            </li>
+            <li>
+              <img src="./public/images/git.svg" />
+              <p>Git</p>
+            </li>
+            <li>
+              <img src="./public/images/adobe.svg" />
+              <p>Adobe CC</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container projects">
+        <h1 class="title" id="projects">PROJECTS</h1>
+        <div class="project jsgame">
+          <div class="info">
+            <h2>Janken!</h2>
+            <p>
+              A simple "Rock, Paper, Scissors" game developed using HTML5, CSS3,
+              and Vanilla JavaScript only! The design is fully responsive, and I
+              used this project to practice CSS animation and DOM Manipulation.
+            </p>
+            <ul>
+              <li>
+                <img src="./public/images/html5.svg" />
+                <p>HTML5</p>
+              </li>
+              <li>
+                <img src="./public/images/css3.svg" />
+                <p>CSS3</p>
+              </li>
+              <li>
+                <img src="./public/images/javascript.svg" />
+                <p>JavaScript</p>
+              </li>
+            </ul>
+            <div class="links">
+              <a href="#"><button>View Live</button></a>
+              <a href="#"><button>GitHub</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="project portfolio">
+          <div class="info">
+            <h2>This Portfolio</h2>
+            <p>
+              This is the first "project" I worked on when I decided to return
+              to web development. I was studying Sass at the time, so I used
+              this portfolio to practice it. I also used it to brush up my
+              JavaScript skills, as they were required for the burger menu and
+              the smooth scroll animation.
+            </p>
+            <ul>
+              <li>
+                <img src="./public/images/html5.svg" />
+                <p>HTML5</p>
+              </li>
+              <li>
+                <img src="./public/images/sass.svg" />
+                <p>Sass</p>
+              </li>
+              <li>
+                <img src="./public/images/javascript.svg" />
+                <p>JavaScript</p>
+              </li>
+            </ul>
+            <div class="links">
+              <a href="#"><button>View Live</button></a>
+              <a href="#"><button>GitHub</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="project budgetapp">
+          <div class="info">
+            <h2>Budget App</h2>
+            <p>
+              This is the project I'm currently working on, as I'm studying
+              React. To focus entirely on learning and praciting the JS library,
+              I decided to use Bootstrap for styling.
+            </p>
+            <ul>
+              <li>
+                <img src="./public/images/react.svg" />
+                <p>React</p>
+              </li>
+              <li>
+                <img src="./public/images/bootstrap.svg" />
+                <p>Bootstrap</p>
+              </li>
+            </ul>
+            <div class="links">
+              <button class="disabled">View Live</button>
+              <button class="disabled">GitHub</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container contact">
+        <div class="info">
+          <h1 class="title" id="contact">CONTACT</h1>
+          <p>Would you like to have a quick chat and ask some questions?</p>
+          <p>
+            Feel free to send me a message using the form or email, and use the
+            links below to find me on social media!
+          </p>
+          <ul>
+            <li>
+              <a
+                href="https://linkedin.com/in/pedrolorandi/"
+                target="_blank"
+                title="Pedro's LinkedIn"
+                ><img src="./public/images/linkedin.svg"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/pedrolorandi"
+                target="_blank"
+                title="Pedro's GitHub"
+                ><img src="./public/images/github.svg"
+              /></a>
+            </li>
+            <li>
+              <a
+                onclick="copyEmail()"
+                title="Click to copy! &#013;hello@pedrolorandi.com"
+                id="emailButton"
+                ><img src="./public/images/email.svg"
+              /></a>
+              <span id="spanCopy" class="copied">Copied!</span>
+            </li>
+          </ul>
+        </div>
+        <div class="form">
+          <form action="#" method="post" name="contact-form">
+            <input type="text" placeholder="Name*" name="name" required />
+            <input type="text" placeholder="Email*" name="email" required />
+            <input type="text" placeholder="Subject*" name="subject" required />
+            <textarea placeholder="Message*" name="message" required></textarea>
+            <input type="submit" value="Send message" name="submit" />
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Developed by Pedro Lorandi</p>
+      <p>Coded with ❤️ in Toronto, ON</p>
+    </footer>
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
