@@ -35,9 +35,6 @@ body a {
 body a:active, body a:visited, body a:focus {
   color: black;
 }
-body a:hover {
-  color: lightgrey;
-}
 body input,
 body textarea {
   font: inherit;
@@ -78,6 +75,11 @@ body textarea:focus {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@media (hover: hover) {
+  body a:hover {
+    color: lightgrey;
   }
 }
 header {
@@ -316,7 +318,7 @@ main .container .title button {
   height: 45px;
   font-family: inherit;
   font-size: 1rem;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   padding: 0px 1em;
   margin: 1rem 0 0 0;
@@ -358,18 +360,25 @@ main .container .tools ul li p {
 }
 
 @media (max-width: 992px) {
-  main .container .title, main .container .description, main .container .tools {
+  main .container .title,
+main .container .description,
+main .container .tools {
     flex-basis: 100%;
   }
-  main .container .title ul, main .container .description ul, main .container .tools ul {
+  main .container .title ul,
+main .container .description ul,
+main .container .tools ul {
     justify-content: space-evenly;
   }
-  main .container .title ul li, main .container .description ul li, main .container .tools ul li {
+  main .container .title ul li,
+main .container .description ul li,
+main .container .tools ul li {
     margin: 0 1em 0 0;
   }
 }
 @media (min-width: 992px) {
-  main .container .title, main .container .description {
+  main .container .title,
+main .container .description {
     flex-basis: 0;
   }
   main .container .tools {
@@ -384,14 +393,25 @@ main .container .tools ul li p {
   }
 }
 @media (min-width: 1200px) {
-  main .container .title, main .container .description, main .container .tools {
+  main .container .title,
+main .container .description,
+main .container .tools {
     flex-basis: 0;
   }
-  main .container .title ul, main .container .description ul, main .container .tools ul {
+  main .container .title ul,
+main .container .description ul,
+main .container .tools ul {
     justify-content: start;
   }
-  main .container .title ul li, main .container .description ul li, main .container .tools ul li {
+  main .container .title ul li,
+main .container .description ul li,
+main .container .tools ul li {
     margin: 0 0 0 1em;
+  }
+}
+@media (hover: hover) {
+  main .container .title button:hover {
+    background: lightgrey;
   }
 }
 main .container.projects {
@@ -538,12 +558,6 @@ main .container.contact .info ul li img {
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
 }
-main .container.contact .info ul li img:active, main .container.contact .info ul li img:visited, main .container.contact .info ul li img:focused {
-  opacity: 0.8;
-}
-main .container.contact .info ul li img:hover {
-  opacity: 0.2;
-}
 main .container.contact .info ul li span {
   background: rgba(167, 201, 87, 0);
   color: white;
@@ -624,6 +638,11 @@ main .container.contact .form ul li span {
   main .container.contact .info ul li span.show,
 main .container.contact .form ul li span.show {
     margin: 3.2em 0 0 -4em;
+  }
+}
+@media (hover: hover) {
+  main .container.contact .info ul li img:hover {
+    opacity: 0.2;
   }
 }
 footer {

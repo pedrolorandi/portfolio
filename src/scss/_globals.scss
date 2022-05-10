@@ -47,10 +47,6 @@ body {
     &:focus {
       color: black;
     }
-
-    &:hover {
-      color: lightgrey;
-    }
   }
 
   input,
@@ -97,5 +93,15 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (hover: hover) {
+  body {
+    a {
+      &:hover {
+        color: lightgrey;
+      }
+    }
   }
 }
