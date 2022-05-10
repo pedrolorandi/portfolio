@@ -1,16 +1,18 @@
-@use '../scss' as *;
+@use "../scss" as *;
 
-html{
+html {
   font-family: $main-font-family;
   font-size: 100%;
   box-sizing: border-box;
 }
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
-body{
+body {
   margin: 0px;
   padding: 0px;
   line-height: 1.43;
@@ -28,7 +30,7 @@ body{
   //   transition: none !important;
   // }
 
-  a{
+  a {
     color: black;
     text-decoration: none;
     outline: none;
@@ -40,47 +42,49 @@ body{
     font-size: 0.8rem;
     letter-spacing: 3px;
 
-
-    &:active, &:visited{
+    &:active,
+    &:visited,
+    &:focus {
       color: black;
     }
 
-    &:hover{
+    &:hover {
       color: lightgrey;
     }
   }
 
-  input, textarea{
+  input,
+  textarea {
     font: inherit;
     color: inherit;
-    
-    &:focus{
+
+    &:focus {
       outline: none;
       box-shadow: none;
     }
   }
 }
 
-.container{
+.container {
   margin: 0 auto;
   padding: 0 15px;
   display: flex;
 }
 
 @media (min-width: 768px) {
-  .container{
+  .container {
     width: 750px;
-  }   
+  }
 }
 
 @media (min-width: 992px) {
-  .container{
+  .container {
     width: 970px;
-  }  
+  }
 }
 
-@media (min-width: 1200px){
-  .container{
+@media (min-width: 1200px) {
+  .container {
     width: 1170px;
   }
 }
