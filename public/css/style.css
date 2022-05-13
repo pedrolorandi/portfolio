@@ -218,7 +218,9 @@ header.fix .container nav.menu {
     -webkit-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg);
   }
-  header .container .nav-menu-icon a i, header .container .nav-menu-icon a i::before, header .container .nav-menu-icon a i::after {
+  header .container .nav-menu-icon a i,
+header .container .nav-menu-icon a i::before,
+header .container .nav-menu-icon a i::after {
     content: " ";
     height: 3px;
     width: 24px;
@@ -438,9 +440,6 @@ main .container.projects .project .info {
   -webkit-transition: all 0.3s ease-out;
   color: white;
 }
-main .container.projects .project .info:hover {
-  opacity: 1;
-}
 main .container.projects .project .info h2 {
   margin: 0;
   line-height: 1;
@@ -498,12 +497,12 @@ main .container.projects .project .info .links button {
   border: 0px none;
   cursor: pointer;
 }
-main .container.projects .project .info .links button:hover {
-  background: grey;
-}
 main .container.projects .project .info .links button.disabled {
   background: grey;
   cursor: default;
+}
+main .container.projects .project .info.hover {
+  opacity: 1;
 }
 main .container.projects .project:first-child {
   margin: 0;
@@ -517,19 +516,21 @@ main .container.projects .project.jsgame {
 main .container.projects .project.portfolio {
   background-image: url("../images/portfolio.png");
 }
-main .container.projects .project:hover {
-  background-size: 105%;
-}
 
 @media (max-width: 992px) {
-  main .container.projects .project {
-    background-size: cover;
-  }
-  main .container.projects .project:hover {
-    background-size: cover;
-  }
   main .container.projects .project .info {
     padding: 1.5em;
+  }
+}
+@media (hover: hover) {
+  main .container.projects .project .info:hover {
+    opacity: 1;
+  }
+  main .container.projects .project .info .links button:hover {
+    background: grey;
+  }
+  main .container.projects .project:hover {
+    background-size: 105%;
   }
 }
 main .container.contact {

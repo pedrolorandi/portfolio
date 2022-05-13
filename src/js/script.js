@@ -10,13 +10,13 @@ hamb.addEventListener("click", function (e) {
 });
 
 // Scroll down script
-let scrollPosition = window.scrollY;
 const header = document.querySelector(".header");
 const headerHeight = header.offsetHeight;
 
 window.addEventListener("scroll", function () {
-  var windowsWidth = window.innerWidth;
-  scrollPosition = window.scrollY;
+  let windowsWidth = window.innerWidth;
+  let windowHeight = window.innerHeight;
+  let scrollPosition = window.scrollY;
 
   if (scrollPosition >= 2) {
     header.classList.add("fix");
@@ -25,7 +25,24 @@ window.addEventListener("scroll", function () {
     header.classList.remove("fix");
     main.classList.remove("marginTop");
   }
+
+  const countProjects = document.querySelectorAll(".project").length;
+  for (let i = 0; i < countProjects; i++) {
+    isScrolledIntoView("project", i, windowHeight);
+  }
 });
+
+function isScrolledIntoView(element, index, windowHeight) {
+  let elementSelected = document.getElementsByClassName(element)[index];
+  let rect = elementSelected.getBoundingClientRect();
+  let firstChild = document.getElementsByClassName("info")[index];
+
+  if (rect.top + 180 < windowHeight && rect.bottom > headerHeight + 180) {
+    firstChild.classList.add("hover");
+  } else {
+    firstChild.classList.remove("hover");
+  }
+}
 
 // Smooth scroll
 function scrollToElement(id) {

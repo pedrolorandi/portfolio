@@ -29,10 +29,6 @@ main {
           -webkit-transition: all 0.3s ease-out;
           color: white;
 
-          &:hover {
-            opacity: 1;
-          }
-
           & h2 {
             margin: 0;
             line-height: 1;
@@ -98,15 +94,15 @@ main {
               border: 0px none;
               cursor: pointer;
 
-              &:hover {
-                background: grey;
-              }
-
               &.disabled {
                 background: grey;
                 cursor: default;
               }
             }
+          }
+
+          &.hover {
+            opacity: 1;
           }
         }
 
@@ -125,10 +121,6 @@ main {
         &.portfolio {
           background-image: url("../images/portfolio.png");
         }
-
-        &:hover {
-          background-size: 105%;
-        }
       }
     }
   }
@@ -138,14 +130,36 @@ main {
   main {
     & .container.projects {
       & .project {
-        background-size: cover;
-
-        &:hover {
-          background-size: cover;
-        }
-
         & .info {
           padding: 1.5em;
+        }
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  main {
+    & .container {
+      &.projects {
+        & .project {
+          & .info {
+            &:hover {
+              opacity: 1;
+            }
+
+            & .links {
+              & button {
+                &:hover {
+                  background: grey;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            background-size: 105%;
+          }
         }
       }
     }
