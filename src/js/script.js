@@ -14,7 +14,7 @@ const header = document.querySelector(".header");
 const headerHeight = header.offsetHeight;
 
 window.addEventListener("scroll", function () {
-  let windowsWidth = window.innerWidth;
+  let windowWidth = window.innerWidth;
   let windowHeight = window.innerHeight;
   let scrollPosition = window.scrollY;
 
@@ -28,7 +28,7 @@ window.addEventListener("scroll", function () {
 
   const countProjects = document.querySelectorAll(".project").length;
   for (let i = 0; i < countProjects; i++) {
-    isScrolledIntoView("project", i, windowHeight);
+    windowWidth <= 992 ? isScrolledIntoView("project", i, windowHeight) : false;
   }
 });
 
