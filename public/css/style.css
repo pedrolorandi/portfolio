@@ -539,6 +539,36 @@ main .container.contact {
 main .container.contact p {
   margin-top: 1rem;
 }
+main .container.contact span.message {
+  background: rgba(167, 201, 87, 0);
+  color: white;
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 0.7em;
+  font-size: 1rem;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  border-radius: 0px;
+  border: 0px none;
+  margin: 0 0 0 1em;
+}
+main .container.contact span.message.sending {
+  background: #d7da34;
+}
+main .container.contact span.message.wrong {
+  background: #d43530;
+  color: white;
+}
+main .container.contact span.show {
+  background: #a7c957;
+  color: #333;
+  margin: -1em 0 0 1em;
+}
+main .container.contact span.disappear {
+  background: rgba(167, 201, 87, 0);
+  color: white;
+}
 main .container.contact .info ul {
   margin: 0;
   padding: 0;
@@ -556,28 +586,8 @@ main .container.contact .info ul li img {
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
 }
-main .container.contact .info ul li span {
-  background: rgba(167, 201, 87, 0);
-  color: white;
-  position: absolute;
-  width: auto;
-  height: auto;
-  padding: 0.7em;
-  font-size: 1rem;
-  transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  border-radius: 0px;
-  border: 0px none;
-  margin: 0 0 0 1em;
-}
-main .container.contact .info ul li span.show {
-  background: #a7c957;
-  color: #333;
-  margin: -1em 0 0 1em;
-}
-main .container.contact .info ul li span.disappear {
-  background: rgba(167, 201, 87, 0);
-  color: white;
+main .container.contact .form span.message {
+  position: relative;
 }
 main .container.contact .form form input,
 main .container.contact .form form textarea {
@@ -597,6 +607,16 @@ main .container.contact .form form textarea:focus {
   border: 1px solid #000;
   color: #000;
 }
+main .container.contact .form form input.disabled,
+main .container.contact .form form textarea.disabled {
+  background: #f3f1f1;
+  border: #d4d4d4 1px solid;
+  cursor: default;
+}
+main .container.contact .form form input.not-valid,
+main .container.contact .form form textarea.not-valid {
+  border: #e72424 1px solid;
+}
 main .container.contact .form form input[type=submit],
 main .container.contact .form form textarea[type=submit] {
   width: auto;
@@ -608,6 +628,10 @@ main .container.contact .form form textarea[type=submit] {
 }
 main .container.contact .form form input[type=submit]:hover,
 main .container.contact .form form textarea[type=submit]:hover {
+  background: lightgrey;
+}
+main .container.contact .form form input[type=submit].disabled,
+main .container.contact .form form textarea[type=submit].disabled {
   background: lightgrey;
 }
 main .container.contact .form form textarea {

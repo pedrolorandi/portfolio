@@ -235,17 +235,46 @@
                 id="emailButton"
                 ><img src="./public/images/email.svg"
               /></a>
-              <span id="spanCopy" class="copied">Copied!</span>
+              <span id="spanCopy" class="message">Copied!</span>
             </li>
           </ul>
         </div>
         <div class="form">
-          <form action="#" method="post" name="contact-form">
-            <input type="text" placeholder="Name*" name="name" required />
-            <input type="text" placeholder="Email*" name="email" required />
-            <input type="text" placeholder="Subject*" name="subject" required />
-            <textarea placeholder="Message*" name="message" required></textarea>
-            <input type="submit" value="Send message" name="submit" />
+          <form action="#" method="post" name="contact-form" id="contactForm">
+            <input
+              type="text"
+              placeholder="Name*"
+              name="name"
+              id="formName"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email*"
+              name="email"
+              id="formEmail"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Subject*"
+              name="subject"
+              id="formSubject"
+              required
+            />
+            <textarea
+              placeholder="Message*"
+              name="message"
+              id="formMessage"
+              required
+            ></textarea>
+            <input
+              type="submit"
+              value="Send message"
+              name="submit"
+              id="formSubmit"
+            />
+            <span id="spanMessage" class="message"></span>
           </form>
         </div>
       </div>
@@ -254,6 +283,11 @@
       <p>Developed by Pedro Lorandi</p>
       <p>Coded with ❤️ in Toronto, ON</p>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script src="src/js/script.js"></script>
   </body>
 </html>

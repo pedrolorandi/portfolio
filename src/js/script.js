@@ -31,6 +31,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// Auto hover on project info
 function isScrolledIntoView(element, index, windowHeight) {
   let elementSelected = document.getElementsByClassName(element)[index];
   let rect = elementSelected.getBoundingClientRect();
@@ -72,14 +73,92 @@ function copyEmail() {
   const emailAddress = "hello@pedrolorandi.com";
 
   navigator.clipboard.writeText(emailAddress);
-  spanCopy.classList.add("show");
-
-  setTimeout(() => {
-    spanCopy.classList.add("disappear");
-  }, 400);
-
-  setTimeout(() => {
-    spanCopy.classList.remove("show");
-    spanCopy.classList.remove("disappear");
-  }, 700);
+  messageAnimation(spanCopy);
 }
+
+// Message animation
+function messageAnimation(element) {
+  let time,
+    reset = 0;
+
+  if (element === document.getElementById("spanCopy")) {
+    time = 400;
+    reset = 700;
+  } else {
+    time = 2500;
+    reset = 2600;
+  }
+  element.classList.remove("sending");
+  element.classList.add("show");
+
+  setTimeout(() => {
+    element.classList.add("disappear");
+  }, time);
+
+  setTimeout(() => {
+    element.classList.remove("show");
+    element.classList.remove("disappear");
+  }, reset);
+}
+
+// Form submit
+const contactForm = document.getElementById("contactForm");
+const formSubmit = document.getElementById("formSubmit");
+const formName = document.getElementById("formName");
+const formEmail = document.getElementById("formEmail");
+const formSubject = document.getElementById("formSubject");
+const formMessage = document.getElementById("formMessage");
+const spanMessage = document.getElementById("spanMessage");
+
+formSubmit.addEventListener("click", function (e) {
+  let formData = {
+    name: formName.value,
+    email: formEmail.value,
+    subject: formSubject.value,
+    message: formMessage.value,
+  };
+
+  let contactInputs = contactForm.elements;
+
+  for (i = 0; i < contactInputs.length; i++) {
+    if (contactInputs[i].validity.valid) {
+      contactInputs[i].classList.remove("not-valid");
+    } else {
+      contactInputs[i].classList.add("not-valid");
+      return;
+    }
+  }
+
+  spanMessage.classList.add("show");
+  spanMessage.classList.add("sending");
+  spanMessage.innerHTML = "Sending message...";
+
+  $.ajax({
+    type: "POST",
+    url: "https://formspree.io/f/xjvljllq",
+    data: formData,
+    dataType: "JSON",
+  })
+    .done(function () {
+      contactForm.reset();
+      spanMessage.innerHTML = "Thanks, I'll get back to you soon!";
+      messageAnimation(spanMessage);
+      contactForm.reset();
+    })
+    .fail(function () {
+      spanMessage.classList.remove("sending");
+      spanMessage.classList.add("wrong");
+      spanMessage.innerHTML = "Please, try again later. I'm sorry!";
+      contactForm.reset();
+
+      let contactInputs = contactForm.elements;
+
+      for (i = 0; i < contactInputs.length; i++) {
+        contactInputs[i].disabled = true;
+        contactInputs[i].placeholder = "";
+        contactInputs[i].classList.add("disabled");
+      }
+    });
+
+  e.preventDefault();
+});

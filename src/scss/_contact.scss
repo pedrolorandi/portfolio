@@ -9,6 +9,40 @@ main {
         margin-top: 1rem;
       }
 
+      span {
+        &.message {
+          background: rgba($color: #a7c957, $alpha: 0);
+          color: white;
+          position: absolute;
+          width: auto;
+          height: auto;
+          padding: 0.7em;
+          font-size: 1rem;
+          transition: all 0.3s ease-out;
+          -webkit-transition: all 0.3s ease-out;
+          border-radius: 0px;
+          border: 0px none;
+          margin: 0 0 0 1em;
+          &.sending {
+            background: rgba($color: #d7da34, $alpha: 1);
+          }
+          &.wrong {
+            background: rgba($color: #d43530, $alpha: 1);
+            color: white;
+          }
+        }
+        &.show {
+          background: rgba($color: #a7c957, $alpha: 1);
+          color: #333;
+          margin: -1em 0 0 1em;
+        }
+
+        &.disappear {
+          background: rgba($color: #a7c957, $alpha: 0);
+          color: white;
+        }
+      }
+
       & .info {
         & ul {
           margin: 0;
@@ -27,37 +61,15 @@ main {
               transition: all 0.3s ease-out;
               -webkit-transition: all 0.3s ease-out;
             }
-
-            span {
-              background: rgba($color: #a7c957, $alpha: 0);
-              color: white;
-              position: absolute;
-              width: auto;
-              height: auto;
-              padding: 0.7em;
-              font-size: 1rem;
-              transition: all 0.3s ease-out;
-              -webkit-transition: all 0.3s ease-out;
-              border-radius: 0px;
-              border: 0px none;
-              margin: 0 0 0 1em;
-
-              &.show {
-                background: rgba($color: #a7c957, $alpha: 1);
-                color: #333;
-                margin: -1em 0 0 1em;
-              }
-
-              &.disappear {
-                background: rgba($color: #a7c957, $alpha: 0);
-                color: white;
-              }
-            }
           }
         }
       }
 
       & .form {
+        span.message {
+          // background-color: red;
+          position: relative;
+        }
         & form {
           & input,
           textarea {
@@ -77,6 +89,16 @@ main {
               color: #000;
             }
 
+            &.disabled {
+              background: rgb(243, 241, 241);
+              border: rgb(212, 212, 212) 1px solid;
+              cursor: default;
+            }
+
+            &.not-valid {
+              border: rgb(231, 36, 36) 1px solid;
+            }
+
             &[type="submit"] {
               width: auto;
               background: #222;
@@ -86,6 +108,9 @@ main {
               cursor: pointer;
 
               &:hover {
+                background: lightgrey;
+              }
+              &.disabled {
                 background: lightgrey;
               }
             }
