@@ -32,6 +32,9 @@ body a {
   font-size: 0.8rem;
   letter-spacing: 3px;
 }
+body a:hover {
+  color: lightgrey;
+}
 body a:active, body a:visited, body a:focus {
   color: black;
 }
@@ -75,11 +78,6 @@ body textarea:focus {
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-@media (hover: hover) {
-  body a:hover {
-    color: lightgrey;
   }
 }
 header {
@@ -330,6 +328,9 @@ main .container .title button {
   border: 0px none;
   cursor: pointer;
 }
+main .container .title button:hover {
+  background: lightgrey;
+}
 main .container .description p:nth-child(2) {
   margin: 1rem 0 0 0;
 }
@@ -408,11 +409,6 @@ main .container .tools ul li {
     margin: 0 0 0 1em;
   }
 }
-@media (hover: hover) {
-  main .container .title button:hover {
-    background: lightgrey;
-  }
-}
 main .container.projects {
   margin-top: 2em;
   flex-direction: column;
@@ -427,6 +423,9 @@ main .container.projects .project {
   -webkit-transition: all 0.3s ease-out;
   background-size: 100%;
   background-position: center;
+}
+main .container.projects .project:hover {
+  background-size: 105%;
 }
 main .container.projects .project .info {
   display: flex;
@@ -497,6 +496,9 @@ main .container.projects .project .info .links button {
   border: 0px none;
   cursor: pointer;
 }
+main .container.projects .project .info .links button:hover {
+  background: grey;
+}
 main .container.projects .project .info .links button.disabled {
   background: grey;
   cursor: default;
@@ -520,17 +522,6 @@ main .container.projects .project.portfolio {
 @media (max-width: 992px) {
   main .container.projects .project .info {
     padding: 1.5em;
-  }
-}
-@media (hover: hover) {
-  main .container.projects .project .info:hover {
-    opacity: 1;
-  }
-  main .container.projects .project .info .links button:hover {
-    background: grey;
-  }
-  main .container.projects .project:hover {
-    background-size: 105%;
   }
 }
 main .container.contact {
@@ -585,6 +576,9 @@ main .container.contact .info ul li img {
   opacity: 0.8;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
+}
+main .container.contact .info ul li img:hover {
+  opacity: 0.2;
 }
 main .container.contact .form span.message {
   position: relative;
@@ -660,11 +654,6 @@ main .container.contact .form ul li span {
   main .container.contact .info ul li span.show,
 main .container.contact .form ul li span.show {
     margin: 3.2em 0 0 -4em;
-  }
-}
-@media (hover: hover) {
-  main .container.contact .info ul li img:hover {
-    opacity: 0.2;
   }
 }
 footer {

@@ -17,6 +17,10 @@ main {
         background-size: 100%;
         background-position: center;
 
+        &:hover {
+          background-size: 105%;
+        }
+
         & .info {
           display: flex;
           flex-direction: column;
@@ -94,6 +98,10 @@ main {
               border: 0px none;
               cursor: pointer;
 
+              &:hover {
+                background: grey;
+              }
+
               &.disabled {
                 background: grey;
                 cursor: default;
@@ -132,34 +140,6 @@ main {
       & .project {
         & .info {
           padding: 1.5em;
-        }
-      }
-    }
-  }
-}
-
-@media (hover: hover) {
-  main {
-    & .container {
-      &.projects {
-        & .project {
-          & .info {
-            &:hover {
-              opacity: 1;
-            }
-
-            & .links {
-              & button {
-                &:hover {
-                  background: grey;
-                }
-              }
-            }
-          }
-
-          &:hover {
-            background-size: 105%;
-          }
         }
       }
     }

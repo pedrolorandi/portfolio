@@ -18,6 +18,10 @@ main {
         border-radius: 0px;
         border: 0px none;
         cursor: pointer;
+
+        &:hover {
+          background: lightgrey;
+        }
       }
     }
 
@@ -111,20 +115,6 @@ main {
           justify-content: start;
           & li {
             margin: 0 0 0 1em;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (hover: hover) {
-  main {
-    & .container {
-      & .title {
-        & button {
-          &:hover {
-            background: lightgrey;
           }
         }
       }
