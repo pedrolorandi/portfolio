@@ -151,8 +151,6 @@ formSubmit.addEventListener("click", function (e) {
       spanMessage.innerHTML = "Please, try again later. I'm sorry!";
       contactForm.reset();
 
-      let contactInputs = contactForm.elements;
-
       for (i = 0; i < contactInputs.length; i++) {
         contactInputs[i].disabled = true;
         contactInputs[i].placeholder = "";
