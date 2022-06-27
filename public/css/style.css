@@ -509,8 +509,8 @@ main .container.projects .project .info.hover {
 main .container.projects .project:first-child {
   margin: 0;
 }
-main .container.projects .project.budgetapp {
-  background-image: url("../images/budgetapp.png");
+main .container.projects .project.todolist {
+  background-image: url("../images/todolist.png");
 }
 main .container.projects .project.jsgame {
   background-image: url("../images/jsgame.png");
