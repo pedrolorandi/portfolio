@@ -20,5 +20,5 @@ This is the first "project" I worked on when I decided to return to web developm
 
 <br/><br/>
 <a href="https://pedrolorandi.com" target="_blank">
-  <img src="https://img.shields.io/badge/view_live-white.svg?style=for-the-badge&logo=airplay-video&logoColor=black" alt="Portfolio" />
+  <img src="https://img.shields.io/badge/view_live-white.svg?style=for-the-badge&logo=airplay-video&logoColor=black" alt="View Live" />
 </a>
